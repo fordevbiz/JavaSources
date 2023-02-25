@@ -9,7 +9,6 @@ public class LuhnAlgorithm{
 		//Remove the last digit if the payload included the check		
 		strb = strb.deleteCharAt(strb.length()-1);
 
-		
 		//	With the payload, start from the rightmost digit.
 		for (int i = strb.length()-1; i >= 0; i-=2) {
 
