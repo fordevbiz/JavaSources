@@ -1,2 +1,4 @@
+.gitignore
 # Class files
 *.class
+status.bat
