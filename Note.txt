@@ -1,3 +1,79 @@
 A good git tutorial
 	https://www.atlassian.com/git
 
+.gitignore creator
+	https://www.toptal.com/developers/gitignore
+
+=== Java commandline ===
+
+-> Compile the source then run with the -cp parameter followed by the library (.jar) path and the compiled class file.
+
+me@mymachine:~/Test$ javac Test2.java
+me@mymachine:~/Test$ java -cp ~/src/postgresql-42.2.5.jar:. Test2
+
+JSch Dependency
+
+pom.xml
+-------
+
+<dependency>
+    <groupId>com.jcraft</groupId>
+    <artifactId>jsch</artifactId>
+    <version>0.1.55</version>
+</dependency>
+
+Path for known_hosts file - %USERPROFILE%\ssh or %USERPROFILE%\.ssh
+
+Maven quick-start
+me@mymachine:~/mvn archetype:generate 
+
+---------------------
+Compile
+---------------------
+javac -cp jsch-0.1.55.jar TestJSch
+
+javac -d . test.java
+    -   creating the folder structure of the packages
+
+javac -classpath libs/*:. -d target -sourcepath . service/CarService.java model/*.java
+
+---------------------
+Run
+---------------------
+java -cp ;jsch-0.1.55.jar TestJSch
+
+---------------------
+Run Linux
+---------------------
+java -cp commons-pool2-2.4.2.jar:jedis-2.8.1.jar TestJedis.java
+
+---------------------
+Manifest
+---------------------
+=> The manifest file must always end with a new line.
+=> Make sure to add the application's entry class in the Manifest before you run the jar.
+    -> Main-Class:
+=> The class path will indicate external class files and jar files you used. 
+E.g.
+
+Class-Path: jsch-0.1.55.jar
+Main-Class: PSS
+
+---------------------
+Create JAR
+---------------------
+jar cfm MyJar.jar Manifest.txt MyPackage/*.class
+E.g.
+jar cfm MyJar.jar Manifest.txt PSS.class
+
+---------------------
+Run JAR
+---------------------
+java -jar MyJar.jar
+
+
+Casting non standard class objects
+
+java -cp "client-combined-3.141.59.jar:client-combined-3.141.59-sources.jar:libs/byte-buddy-1.8.15.jar:libs/guava-25.0-jre.jar:libs/okio-1.14.0.jar:libs/commons-exec-1.3.jar:libs/okhttp-3.11.0.jar:." test2
+
+=== End of Java command line ===

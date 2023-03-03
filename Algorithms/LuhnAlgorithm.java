@@ -40,6 +40,7 @@ public class LuhnAlgorithm{
 }
 // NIB_DUKEMEI_MKR1
 // https://en.wikipedia.org/wiki/Luhn_algorithm
+// https://simplycalc.com/luhn-calculate.php
 /*
 	function isValid(cardNumber[1..length])
 	    sum := 0

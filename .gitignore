@@ -1,3 +1,14 @@
 # Class files
 *.class
+
+# JAR files
+*.jar
+
+# Batch script
 status.bat
+
+# Ignore files in CardFile folder
+/CardFile/*.*
+
+# PDFs
+*.PDF
